@@ -1,0 +1,114 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: radial-gradient(circle, #007BFF, #00008B);
+    font-family: 'Arial Rounded MT Bold', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+.website-name {
+    color: white;
+    font-size: 3.5em;
+    margin: 30px 0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    letter-spacing: 2px;
+}
+
+.login-box {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 40px 50px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+    width: 380px;
+    text-align: center;
+    transform: translateY(0);
+    transition: transform 0.3s ease;
+}
+
+.login-box:hover {
+    transform: translateY(-5px);
+}
+
+.love-message {
+    color: #ff4081;
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    animation: pulse 2s infinite;
+}
+
+input {
+    width: 100%;
+    padding: 14px;
+    margin: 12px 0;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+    gap: 15px;
+}
+
+.login-btn, .signup-btn {
+    padding: 14px 35px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    font-size: 1.1em;
+}
+
+.login-btn {
+    background: #007BFF;
+    color: white;
+    flex: 1;
+}
+
+.signup-btn {
+    background: #FF4444;
+    color: white;
+    flex: 1;
+}
+
+.login-btn:hover {
+    background: #0056b3;
+    transform: translateY(-3px);
+    box-shadow: 0 7px 20px rgba(0,123,255,0.4);
+}
+
+.signup-btn:hover {
+    background: #cc0000;
+    transform: translateY(-3px);
+    box-shadow: 0 7px 20px rgba(255,68,68,0.4);
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+@media (max-width: 480px) {
+    .login-box {
+        width: 90%;
+        padding: 30px;
+    }
+    
+    .website-name {
+        font-size: 2.5em;
+    }
+}

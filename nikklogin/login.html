@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NikkHome - Welcome</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <h1 class="website-name">NikkHome</h1>
+    
+    <div class="login-box">
+        <div class="love-message">❤️ Share the Love ❤️</div>
+        <h2>Welcome Home!</h2>
+        <form id="loginForm">
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <div class="error-message" id="errorMessage"></div>
+            
+            <div class="button-container">
+                <button type="submit" class="login-btn">Login</button>
+                <button type="button" class="signup-btn">Sign Up</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        const form = document.getElementById('loginForm');
+        const errorMessage = document.getElementById('errorMessage');
+        const username = document.getElementById('username');
+        const password = document.getElementById('password');
+        const signupBtn = document.querySelector('.signup-btn');
+
+        // Handle form submission
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            if(validateForm()) {
+                window.location.href = '/login2/proposal.html';
+            }
+        });
+
+        // Handle signup button click
+        signupBtn.addEventListener('click', () => {
+            if(validateForm()) {
+                window.location.href = '/login2/proposal.html';
+            }
+        });
+
+        // Validation function
+        function validateForm() {
+            if(username.value.trim() === '' || password.value.trim() === '') {
+                errorMessage.textContent = 'Please fill in both username and password!';
+                errorMessage.style.display = 'block';
+                return false;
+            }
+            errorMessage.style.display = 'none';
+            return true;
+        }
+    </script>
+</body>
+</html>

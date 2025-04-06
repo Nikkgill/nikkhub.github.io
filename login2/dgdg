@@ -1,0 +1,6 @@
+nikkhome-login/
+├── index.html
+├── proposal.html
+├── style.css
+├── script.js
+└── confetti.js (get from: https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js)
